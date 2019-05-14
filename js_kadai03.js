@@ -1,5 +1,4 @@
 // 3.jQueryによるAjaxはajax()以外にget()やpost()、getJSON()メソッドがあります。今回学習した課題をgetJSON()で書き換えてみましょう。
-(function($, window) {
   $(function() {
     alert('first');
     $('#get_bank_list').on('click', function(e) {
@@ -8,8 +7,8 @@
 
       $.getJSON({
         url: url,
-        type: 'get',
-        data: {}
+        type: 'get'
+        // data: {}
       }).done(function(data, status, xhr) {
         alert('done');
         var result = JSON.stringify(data);
@@ -26,4 +25,3 @@
     });
     alert('last');
   });
-})(jQuery, window);

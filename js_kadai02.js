@@ -20,4 +20,4 @@
     });
     $('#login').on('click', check(e)
   });
-})(jQuery, window);
+})(jQuery, window)
